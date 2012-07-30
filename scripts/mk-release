@@ -1,0 +1,13 @@
+#!/bin/sh
+VERSION=${1:-unstable}
+echo "Create release package for $VERSION"
+
+DIR=fluent-agent-lite-for-windows-${VERSION}
+ROOT=$(git rev-parse --show-toplevel)
+
+rm -rf $DIR $DIR.zip
+mkdir $DIR
+cp ${ROOT}/README.md $DIR
+cp -r ${ROOT}/fluent-agent-windows-lite/bin/Release/*  $DIR
+rm $DIR/*.pdb
+zip -r $DIR.zip $DIR

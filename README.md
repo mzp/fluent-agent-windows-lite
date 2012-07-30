@@ -14,7 +14,12 @@ This agent reads specified files, and sends each lines to fluentd servers. One l
 
 0.1
 
-## BUILD
+## Install from binary package
+
+Download from [download page](https://github.com/mzp/fluent-agent-windows-lite/downloads), unzip, and copy to some directory(e.g. `c:/fluent-agent`).
+
+## Build from source code
+### BUILD
 
 Setup F# environment. See also: [MSDN Visual F#](http://msdn.microsoft.com/en-us/vstudio/hh388569.aspx).
 
@@ -22,7 +27,7 @@ Setup F# environment. See also: [MSDN Visual F#](http://msdn.microsoft.com/en-us
     > cd fluent-agent-windows-lite
     > msbuild fluent-agent-windows-lite.sln /t:Build /p:Configuration=Release
 
-## INSTALL
+### INSTALL
 
 Copy `fluent-agent-windows-lite\bin\Release` to some directory(e.g. `C:/fluent-agent`).
 
