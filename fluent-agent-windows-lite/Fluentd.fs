@@ -54,15 +54,15 @@ let serialize (obj : MessagePackObject) =
     let packer =
         Packer.Create(stream)
     packer.Pack(obj)
-    stream.GetBuffer()
+    (packer.Position, stream.GetBuffer())
 
 let emit tag (xs : string list) (state : t) =
     try
         let now = 
             DateTime.Now
-        let buffer =
+        let size, buffer =
             toObject now tag xs |> serialize
-        state.client.GetStream().Write(buffer, 0, buffer.Length)
+        state.client.GetStream().Write(buffer, 0, Core.Operators.int size)
         state.client.GetStream().Flush()
         state
     with e ->
