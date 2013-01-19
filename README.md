@@ -12,7 +12,7 @@ This agent reads specified files, and sends each lines to fluentd servers. One l
 
 ### VERSION
 
-0.1
+0.1.1
 
 ## Install from binary package
 
@@ -87,6 +87,12 @@ Path for this file.
 Path for position stored file. If this field is omited, a file position is not stored.
 
 *****
+
+## Changelog
+
+### 0.1.1(2013-01-19)
+
+ * fix bug: #1
 
 ## License
 
