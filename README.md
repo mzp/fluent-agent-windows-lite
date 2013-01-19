@@ -1,4 +1,4 @@
-# fluent-agent-windows-lite
+﻿# fluent-agent-windows-lite
 
 * http://github.com/mzp/fluent-agent-windows-lite
 
@@ -16,7 +16,7 @@ This agent reads specified files, and sends each lines to fluentd servers. One l
 
 ## Install from binary package
 
-Download from [download page](https://github.com/mzp/fluent-agent-windows-lite/downloads), unzip, and copy to some directory(e.g. `c:/fluent-agent`).
+Download from [downloads area](https://github.com/mzp/fluent-agent-windows-lite/tree/master/downloads), unzip, and copy to some directory(e.g. `c:/fluent-agent`).
 
 ## Build from source code
 ### BUILD
